@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "comforta";
+    src: url(Comfortaa-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "comforta";
+}
+
+html, body{
+    overflow: hidden;
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f2d9e6, #c9eaf9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player{
+    width: 30rem;
+    height: fit-content;
+    margin: 1rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0.5rem 0.5rem 59px -24px black;
+}
+.btn{
+    transition: all 1s ease;
+}
+.btn:hover{
+    transform: translateY(5px);
+}
+
+.imageHolder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 5s ease;
+}
+
+.imageHolder .image{
+    background-image: url(Sudais.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 8rem;
+    height: 9rem;
+    position: relative;
+    margin: 1rem;
+    border-radius: 20px;
+    /* transition: top 2s ease; */
+    top: -2rem;
+}
+
+
+.imageHolder:hover .image{
+    
+}
+
+.imageHolder p {
+    font-size: 1.5rem;
+}
+
+.imageHolder p:nth-child(2){
+    font-weight: bolder;
+}
+
+.imageHolder p:nth-child(3){
+    color: #8b8b8b;
+}
+
+.holderScrubber{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrubberHolder{
+    overflow: hidden;
+    border-radius: 20px;
+    width: 90%;
+    height: fit-content;
+    background-color: #c9eaf9;
+    margin: 1rem 0;
+    box-shadow: 1px 1px 18px 1px #f2d9e6;
+    border: 1px #333 solid;
+}
+
+#scrubber{
+    border: solid 1px #f2d9e6;
+    width: 1px;
+    height: 1rem;
+    background-color: #f2d9e6;
+}
+
+.controlls{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button{
+    padding: 0rem 1rem;
+    border-radius: 30rem;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: #c9eaf9;
+    border: none;
+    box-shadow: 1px 1px 18px 1px #f2d9e6;
+    border: 1px #333 solid;
+}
+
+button span{
+    display: flex;
+    align-items: center;
+}
+
+.d-none{
+    display: none !important;
+}
