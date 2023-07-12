@@ -1,0 +1,36 @@
+.custom-range {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 1rem;
+    background-color: #f2d9e6;
+    border: solid 1px #f2d9e6;
+    border-radius: 20px;
+    margin: 1rem 0;
+    outline: none !important;
+
+    margin: 1rem 0;
+    box-shadow: 1px 1px 18px 1px #f2d9e6;
+    border: 1px #333 solid;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: #c9eaf9;
+    border: solid 1px #333;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none !important;
+}
+
+.custom-range::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    background-color: #c9eaf9;
+    border: solid 1px #333;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none !important;
+}

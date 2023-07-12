@@ -3,20 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Player</title>
+    <title>Reciters || Listen To Quran</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="scrubber.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-    <audio id="audioHolder" src="sudais/001-al-fatihah.mp3"></audio>
-    <div class="scrubberHolder">
-        <div id="scrubber"></div>
-    </div>
-    <button id="play">play</button>
-    <button id="pause">pause</button>
-    <button id="loop">loop</button>
-    <input accept="audio/*" type="file" id="audioFile">
+    <div class="background">
+      <audio id="audioHolder" type="audio/mp3" src=""></audio>
+      <div class="player">
 
-    <script src="index.js"></script>
+        <div class="imageHolder">
+          <div class="image btn"></div>
+          <p id="surahname">Al-Fatihah</p>
+          <p>Abdul-Rahman Al-Sudais</p>
+        </div>
+
+        <div class="holderScrubber">
+          <input class="custom-range btn" type="range" max="100" min="0" value="0">
+        </div>
+
+        <div class="timeHolder">
+          <p class="time"></p>
+        </div>
+
+        <div class="controlls">
+          <button class="btn" id="previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.854 3.646a.5.5 0 0 1 0 .708L8.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0zM4.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"/>
+            </svg>
+          </button>
+          <button class="btn" id="play">
+
+            <span class="pause d-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause"
+                viewBox="0 0 16 16">
+                <path
+                  d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              </svg>
+            </span>
+
+            <span class="play">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+              </svg>
+            </span>
+
+          </button>
+          <button class="btn" id="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </button>
+          <button class="btn" id="loop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-infinity" viewBox="0 0 16 16">
+              <path d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015L8 6.978Zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916L8.656 7.75Z"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
